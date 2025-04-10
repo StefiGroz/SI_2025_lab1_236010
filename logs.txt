@@ -1,0 +1,10 @@
+* 2698c65 Implement markTaskInCategoryAsCompleted feature
+| * 4e75b69 Implement markTaskAsCompletedByName feature
+|/  
+| * 24f1750 Implement removeTaskByName method
+|/  
+* c8b0a99 Add starter code
+* 94712cd Initial commit
+* f79137c Initial commit
+* 11e4f7e first commit
+* e677f99 Initial commit
