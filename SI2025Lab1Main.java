@@ -73,6 +73,15 @@ class TaskManager {
         return new ArrayList<>();
     }
 
+public void markTaskAsCompletedByName(String name) {
+    for (Task task : tasks) {
+        if (task.getName().equalsIgnoreCase(name)) {
+            task.setCompleted(true);
+            break;
+        }
+    }
+}
+
     // 3. List tasks sorted by name
     public void sortTasksByName() {
         // TODO: Implement sorting logic
