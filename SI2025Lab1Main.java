@@ -53,6 +53,13 @@ class TaskManager {
     public void addTask(String name, Priority priority, String category) {
         tasks.add(new Task(name, priority, category));
     }
+public void markAllTasksInCategoryAsCompleted(String category) {
+    for (Task task : tasks) {
+        if (task.getCategory().equalsIgnoreCase(category)) {
+            task.setCompleted(true);
+        }
+    }
+}
 
     public void printTasks() {
         for (Task task : tasks) {
@@ -64,6 +71,8 @@ class TaskManager {
 
     // 1. Remove a task by name
     public void removeTask(String name) {
+    tasks.removeIf(task -> task.getName().equalsIgnoreCase(name));
+
         // TODO: Implement removal logic
     }
 
@@ -72,6 +81,15 @@ class TaskManager {
         // TODO: Implement logic to return completed tasks
         return new ArrayList<>();
     }
+
+public void markTaskAsCompletedByName(String name) {
+    for (Task task : tasks) {
+        if (task.getName().equalsIgnoreCase(name)) {
+            task.setCompleted(true);
+            break;
+        }
+    }
+}
 
     // 3. List tasks sorted by name
     public void sortTasksByName() {
