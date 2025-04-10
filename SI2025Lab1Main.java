@@ -53,6 +53,13 @@ class TaskManager {
     public void addTask(String name, Priority priority, String category) {
         tasks.add(new Task(name, priority, category));
     }
+public void markAllTasksInCategoryAsCompleted(String category) {
+    for (Task task : tasks) {
+        if (task.getCategory().equalsIgnoreCase(category)) {
+            task.setCompleted(true);
+        }
+    }
+}
 
     public void printTasks() {
         for (Task task : tasks) {
